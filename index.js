@@ -45,9 +45,6 @@ const rest = new REST({ version: '10' }).setToken(token);
 	}
 })();
 
-client.on('messageCreate' , async(m)=>{
-	console.log(((await m.guild.fetchAuditLogs()).entries))
-})
 
 
 client.on('interactionCreate' , async (interaction) =>{
