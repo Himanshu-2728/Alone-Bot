@@ -4,7 +4,7 @@ module.exports = {
     name: "ping",
     data: new SlashCommandBuilder()
         .setName('ping')
-        .setDescription('this is description about this command'),
+        .setDescription('replies with Pong🎈'),
     
     callBack: async(interaction) =>{
         
