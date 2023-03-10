@@ -1,4 +1,4 @@
-const { Client , Routes , GatewayIntentBits  , REST, Collection} = require('discord.js')
+const { Client , Routes , GatewayIntentBits  , REST, Collection, MessageActivityType} = require('discord.js')
 const { token , clientId , guildId } = require('./config.json')
 const fs = require('fs');
 const Prefixes = require('./Data/prefixes.json')
@@ -56,7 +56,7 @@ const rest = new REST({ version: '10' }).setToken(token);
 client.on('messageCreate' , async(message) => {
 	if(message.author.bot) return;
 	let guildId = message.guild.id
-	if(!Prefixes[guildId]) console.log('Prefix not present')
+	if(!Prefixes[guildId]) return;
 
 	if(!message.content.startsWith(Prefixes[guildId])) return
 	else{
@@ -65,14 +65,20 @@ client.on('messageCreate' , async(message) => {
 		content.shift()
 		const args = content
 
-		chatcommands.get(command.toLowerCase())(message , args)
+		try {
+			chatcommands.get(command.toLowerCase())(message , args)
+
+		}catch (error){
+			console.log(`The command ${command} does not exist`)
+			return
+		}
 	}
 
 })
 
 client.on('interactionCreate' , async (interaction) =>{
 	if(!interaction.isChatInputCommand()) return;
-
+	
 	const command = callbacks.get(interaction.commandName)(interaction)
 
 
