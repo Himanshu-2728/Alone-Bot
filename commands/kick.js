@@ -2,6 +2,8 @@ const { SlashCommandBuilder , PermissionsBitField } = require('discord.js')
 
 module.exports = {
     name: 'kick',
+    description: 'Kicks the specified user',
+    category: 'mod',
     data: new SlashCommandBuilder()
         .setDefaultMemberPermissions(PermissionsBitField.StageModerator)
         .setName('kick')

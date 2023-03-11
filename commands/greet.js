@@ -2,6 +2,8 @@ const { SlashCommandBuilder, User } = require('discord.js')
 
 module.exports = {
     name: 'greet',
+    description: 'Sends a greet to the specified user',
+    category: 'fun',
     data: new SlashCommandBuilder()
         .setName('greet')
         .setDescription('Greets the specified user')

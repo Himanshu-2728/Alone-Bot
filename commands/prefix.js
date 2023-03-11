@@ -13,6 +13,8 @@ let days = {
 
 module.exports = {
     name: 'prefix',
+    category: 'admin',
+    description: 'Sets the server prefix to the given value',
     data: new SlashCommandBuilder()
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
         .setName('prefix')

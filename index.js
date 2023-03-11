@@ -1,4 +1,4 @@
-const { Client , Routes , GatewayIntentBits  , REST, Collection, MessageActivityType} = require('discord.js')
+const { Client , Routes , GatewayIntentBits  , REST, Collection} = require('discord.js')
 const { token , clientId , guildId } = require('./config.json')
 const fs = require('fs');
 const Prefixes = require('./Data/prefixes.json')
@@ -77,6 +77,7 @@ client.on('messageCreate' , async(message) => {
 })
 
 client.on('interactionCreate' , async (interaction) =>{
+	interaction.channel.createMessageComponentCollector({})
 	if(!interaction.isChatInputCommand()) return;
 	
 	const command = callbacks.get(interaction.commandName)(interaction)

@@ -2,6 +2,8 @@ const { SlashCommandBuilder  , PermissionsBitField , ActionRowBuilder  , Interac
 
 module.exports = {
     name: 'ban',
+    description: 'Bans the specifies user',
+    category: 'mod',
     data: new SlashCommandBuilder()
         .setDefaultMemberPermissions(PermissionsBitField.StageModerator)
         .setName('ban')

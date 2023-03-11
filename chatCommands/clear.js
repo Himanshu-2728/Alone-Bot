@@ -1,6 +1,8 @@
 
 module.exports = {
     name: 'clear',
+    description: 'Clears the amount of messages',
+    category: 'mod',
     callBack: async(message, args) => {
         let amount  = Number(args[0])
         console.log(amount)
