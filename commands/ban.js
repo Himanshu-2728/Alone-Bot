@@ -1,7 +1,7 @@
 const { SlashCommandBuilder  , PermissionsBitField , ActionRowBuilder  , InteractionCollector , ButtonBuilder, ButtonStyle } = require('discord.js')
 
 module.exports = {
-    name: 'ban',
+    name: 'Ban',
     description: 'Bans the specifies user',
     category: 'mod',
     data: new SlashCommandBuilder()

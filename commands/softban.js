@@ -3,7 +3,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js')
 
 
 module.exports = {
-    name: 'tempban',
+    name: 'Tempban',
     category: 'mod',
     description: 'Bans the specified user for the time',
     data: new SlashCommandBuilder()

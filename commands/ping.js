@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, messageLink } = require('discord.js');
 
 module.exports = {
-    name: "ping",
+    name: "Ping",
     category: 'gen',
     description: 'The time taken to send and recieve response from discord server',
     data: new SlashCommandBuilder()

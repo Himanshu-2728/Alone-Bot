@@ -12,7 +12,7 @@ let days = {
 }
 
 module.exports = {
-    name: 'prefix',
+    name: 'Prefix',
     category: 'admin',
     description: 'Sets the server prefix to the given value',
     data: new SlashCommandBuilder()

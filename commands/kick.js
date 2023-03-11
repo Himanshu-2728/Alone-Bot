@@ -1,7 +1,7 @@
 const { SlashCommandBuilder , PermissionsBitField } = require('discord.js')
 
 module.exports = {
-    name: 'kick',
+    name: 'Kick',
     description: 'Kicks the specified user',
     category: 'mod',
     data: new SlashCommandBuilder()

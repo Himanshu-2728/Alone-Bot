@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
-    name: 'setratelimitperuser',
+    name: 'SetrateLimitPerUser',
     category: 'mod',
     description: 'Helps to set the rate limit of the channel',
     data: new SlashCommandBuilder()
